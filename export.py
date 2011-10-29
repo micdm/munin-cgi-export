@@ -30,8 +30,10 @@ class DataReceiver(object):
         @param data_type: string
         @return: string
         '''
+        if data_type == 'load':
+            return 'load-load-g'
         if data_type == 'users':
-            return 'users-pty-g'
+            return 'users-pts-g'
         return None
         
     def _get_filename_for_type(self, data_type):
@@ -88,7 +90,7 @@ class Request(object):
         if 'type' not in self._query_string:
             return None
         result = self._query_string['type'][0]
-        if result not in ('users', ):
+        if result not in ('load', 'users'):
             return None
         return result
     
@@ -100,7 +102,7 @@ class Request(object):
         if 'period' not in self._query_string:
             return None
         result = self._query_string['period'][0]
-        if result not in ('hour', 'day', ):
+        if result not in ('hour', 'day'):
             return None
         return result 
 
