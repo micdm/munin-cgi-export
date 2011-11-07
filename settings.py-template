@@ -1,0 +1,13 @@
+# coding=utf-8
+
+# Директория с данными:
+DATA_DIR = '/var/lib/munin'
+
+# Перечисление нод и доступных для них отчетов:
+NODES = [
+    {
+        'domain': 'localdomain',
+        'name': 'localhost.localdomain',
+        'reports': ['load', 'users']
+    }
+]
