@@ -8,6 +8,6 @@ NODES = [
     {
         'domain': 'localdomain',
         'name': 'localhost.localdomain',
-        'reports': ['load', 'users']
+        'reports': ['if_eth0', 'load', 'users']
     }
 ]
