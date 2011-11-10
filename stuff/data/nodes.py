@@ -26,7 +26,7 @@ class NodesDataGenerator(object):
         @param node: dict
         @return: Element
         '''
-        node_element = Element('node', {'domain': node['domain'], 'name': node['name']})
+        node_element = Element('node', {'name': node['name']})
         for report in node['reports']:
             report_element = self._generate_report_data(report)
             node_element.append(report_element)

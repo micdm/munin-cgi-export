@@ -19,7 +19,7 @@ def get_report_response(request):
     '''
     Обрабатывает запрос отчета.
     '''
-    node = Node(request.get_node_domain(), request.get_node_name())
+    node = Node(request.get_node_name())
     generator = RrdDataGenerator(node, request.get_data_type(), request.get_period())
     return DataAvailableResponse(generator.get_data())
 

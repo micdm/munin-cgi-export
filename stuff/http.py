@@ -25,34 +25,27 @@ class Request(object):
         @return: string
         '''
         return self._get_part(0)
-
-    def get_node_domain(self):
-        '''
-        Возвращает домен запрошенной ноды.
-        @return: string
-        '''
-        return self._get_part(1)
     
     def get_node_name(self):
         '''
         Возвращает имя запрошенной ноды.
         @return: string
         '''
-        return self._get_part(2)
+        return self._get_part(1)
         
     def get_data_type(self):
         '''
         Возвращает тип запрошенных данных.
         @return: string
         '''
-        return self._get_part(3)
+        return self._get_part(2)
     
     def get_period(self):
         '''
         Возвращает период.
         @return: string
         '''
-        return self._get_part(4)
+        return self._get_part(3)
 
 
 class Response(object):

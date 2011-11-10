@@ -8,26 +8,22 @@ class Node(object):
     Нода.
     '''
     
-    def __init__(self, domain, name):
+    def __init__(self, name):
         '''
-        @param domain: string
         @param name: string
         '''
-        self._info = self._get_info(domain, name)
-        if self._info is None:
-            raise InvalidNodeException()
+        self._info = self._get_info(name)
         
-    def _get_info(self, domain, name):
+    def _get_info(self, name):
         '''
         Находит и возвращает информацию о ноде из настроек.
-        @param domain: string
         @param name: string
         @return: dict
         '''
         for node in NODES:
-            if node['domain'] == domain and node['name'] == name:
+            if node['name'] == name:
                 return node
-        return None
+        raise InvalidNodeException()
     
     def get_domain(self):
         '''
