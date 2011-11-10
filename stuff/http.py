@@ -18,6 +18,13 @@ class Request(object):
         @return: string
         '''
         return self._parts[index] if len(self._parts) > index else None
+    
+    def get_action(self):
+        '''
+        Возвращает действие.
+        @return: string
+        '''
+        return self._get_part(0)
 
     def get_node_domain(self):
         '''

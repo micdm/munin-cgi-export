@@ -5,7 +5,7 @@ from subprocess import Popen, PIPE
 from settings import DATA_DIR
 from stuff.errors import InvalidReportTypeException, InvalidPeriodException
 
-class DataReceiver(object):
+class RrdDataGenerator(object):
     '''
     Получатель данных из RRD.
     '''

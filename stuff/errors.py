@@ -1,5 +1,11 @@
 # coding=utf-8
 
+class InvalidActionException(Exception):
+    '''
+    Запрошено некорректное действие.
+    '''
+
+
 class InvalidNodeException(Exception):
     '''
     Запрошена некорректная нода.
