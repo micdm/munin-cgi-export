@@ -1,6 +1,8 @@
 1. Поправьте в munin-export.conf пути и поместите его в /etc/apache2/conf.d:
 > ln -s munin-export.conf /etc/apache2/conf.d/munin-export.conf
-2. Поправьте в export.py пути к БД Munin'a.
-3. Перезапустите Apache.
+2. Перезапустите Apache.
 > service apache2 reload
-4. Получайте XML-выдачу по адресу http://localhost/munin-export/export.py?type=users&period=hour.
+3. Скопируйте settings.py-template в settings.py.
+4. Поправьте в settings.py путь к БД Munin'a, а также список нод и доступных для них отчетов.
+5. Получайте список нод в XML по адресу /munin-export/nodes/.
+6. Получайте отчёты в XML по адресу /munin-export/report/localdomain/localhost.localdomain/load/hour/.
