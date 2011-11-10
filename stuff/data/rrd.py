@@ -26,6 +26,8 @@ class RrdDataGenerator(object):
         @param data_type: string
         @return: string
         '''
+        if data_type == 'if_eth0':
+            return 'if_eth0-down-d'
         if data_type == 'load':
             return 'load-load-g'
         if data_type == 'users':
